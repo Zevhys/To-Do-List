@@ -1,0 +1,281 @@
+/* Theme setting for dark mode */
+html {
+  color-scheme: only dark !important;
+}
+
+/* Center-align heading */
+h1 {
+  text-align: center;
+}
+
+/* Set font family for the entire page */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Remove border for text input */
+input[type="text"] {
+  border: 0;
+}
+
+/* Button hover effect */
+button:hover {
+  transform: scale(1.15);
+  transition: 0.1s ease;
+}
+
+/* Hidden class */
+.hidden {
+  display: none !important;
+}
+
+/* Todo wrapper styles */
+.todo-wrapper {
+  margin-top: 50px;
+  background-color: #0c0d0d;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  font-weight: 25px;
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Heading 2 inside todo wrapper */
+.todo-wrapper h2 {
+  margin: 0;
+}
+
+/* Ordered list inside todo wrapper */
+.todo-wrapper ol {
+  margin: 20px 0;
+  text-align: left;
+}
+
+/* List item inside todo wrapper */
+.todo-wrapper ol li {
+  margin: 5px 0;
+  padding: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+/* Hover effect for list item inside todo wrapper */
+.todo-wrapper ol li:hover {
+  background-color: #000;
+  transition: background-color 0.3s ease;
+}
+
+/* Checkbox input inside list item */
+.todo-wrapper ol li input {
+  transition: transform 0.3s ease;
+}
+
+/* Even numbered list item background color */
+.todo-wrapper ol l:nth-child(even) {
+  background: #ddd;
+}
+
+/* Completed class in todo wrapper */
+.todo-wrapper .completed {
+  text-decoration: line-through;
+  color: #666;
+}
+
+/* Pretty button in todo wrapper */
+.todo-wrapper .pretty-button {
+  margin: 10px 10px;
+  padding: 5px 20px;
+  border-radius: 15px;
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  font-size: small;
+}
+
+/* Hover effect for pretty button */
+.todo-wrapper .pretty-button:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+/* Input styles in todo wrapper */
+.todo-wrapper input {
+  padding: 3px 4px;
+}
+
+/* Form styles in todo wrapper */
+.todo-wrapper form {
+  display: inline-block;
+}
+
+/* Flexbox styles for form */
+.form-flex {
+  display: flex;
+  margin: auto;
+}
+
+/* First child styles in flexbox */
+.form-flex > :first-child {
+  width: 24px;
+}
+
+/* Last child styles in flexbox */
+.form-flex > :last-child {
+  flex-grow: 1;
+  max-width: fit-content;
+}
+
+/* Control wrapper styles */
+#control-wrapper {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+/* Add button styles */
+#add-btn {
+  background-color: #0c0d0d;
+  color: #fff;
+  border: 2px solid #0c0d0d;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for add button */
+#add-btn:hover {
+  color: #0c0d0d;
+  border-color: #fff;
+  background-color: #fff;
+}
+
+/* Clear button styles in todo wrapper */
+.todo-wrapper #clear-btn {
+  background-color: #9b1c20;
+}
+
+/* Empty button styles in todo wrapper */
+.todo-wrapper #empty-btn {
+  background-color: #f22;
+}
+
+/* Empty button styles */
+#empty-btn {
+  background-color: #f22;
+  color: #fff;
+  border: 2px solid #f22;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Hover effect for empty button */
+#empty-btn:hover {
+  background-color: #fff;
+  color: #f22;
+  border-color: #fff;
+}
+
+/* Save button styles in todo wrapper */
+.todo-wrapper #save-btn {
+  background-color: #49b749;
+}
+
+/* Todo list styles */
+#todo-list {
+  font-size: 1.2em;
+}
+
+/* List item marker styles in todo list */
+#todo-list li::marker {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+/* Checked input styles in todo list */
+#todo-list li input:checked ~ span {
+  text-decoration: line-through 3px;
+}
+
+/* Cursor pointer for input in todo list */
+#todo-list li input {
+  cursor: pointer;
+}
+
+/* Delete icon styles in todo list */
+#todo-list li .icon-del {
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for delete icon */
+#todo-list li .icon-del:hover {
+  transform: scale(1.2);
+}
+
+/* Height Icon Img */
+#todo-list li .icon-del img {
+  max-height: 1em;
+}
+
+/* Todo wrapper border and gradient background effect */
+.todo-wrapper {
+  --borderWidth: 5px;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.todo-wrapper:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 5s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+/* Keyframe animation for gradient background */
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do-List</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Logo Website -->
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>My To Do List</h1>
+
+  <div class="todo-wrapper">
+    <div class="form-flex">
+      <div></div>
+      <div>
+        <label for="todo-entry-box">
+          <h2>Getting Started</h2>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-flex">
+      <div></div>
+      <div>
+        <form action="">
+          <input type="text" id="todo-entry-box" maxlength="50">
+        </form>
+        <button id="add-btn" class="pretty-button">Add</button>
+      </div>
+    </div>
+
+    <hr>
+
+    <li class="hidden" id="to-do-template">
+      <input class="completed" onclick="saveList()" type="checkbox" name="" id="">
+      <span class="text">
+        belanja
+      </span>
+      <a class="icon-del" onclick="deleteToDoItem(this)"><img
+          src="https://s2.svgbox.net/materialui.svg?ic=delete&color=fff"></a>
+    </li>
+
+    <ol id="todo-list">
+    </ol>
+
+    <div id="control-wrapper">
+      <button id="empty-btn" onclick="emptyList ()" class="pretty-button">Delete All</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
